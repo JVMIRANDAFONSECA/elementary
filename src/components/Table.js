@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PeriodicTableJSON from '../resources/PeriodicTableJSON.json';
 import Element from './Element.js';
+import FilteredElement from './FilteredElement';
 
 /**
  * Grid component containing all Elements
@@ -16,7 +17,7 @@ class Table extends Component {
          */
         const createElement = (elementInformation) => {
             return (
-                <Element element={elementInformation} />
+                <FilteredElement element={elementInformation} filter={this.props.filter} /> 
             )
         }
 
