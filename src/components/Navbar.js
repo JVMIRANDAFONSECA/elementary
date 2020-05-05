@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
 import fav1 from '../resources/fav1.jpg';
+/**
+ * Main control interface for the app
+ */
 class Navbar extends Component {
+
+    /**
+    * Accerts that a new filter btn was pressed and assing the btn value as a state for the App.js component
+    */
+    handleFilterClick = (e) => {
+        this.props.setFilter(e.target.value);
+    }
+
     render() {
         return (
             <nav className="navbar navbar-light bg-light">
@@ -9,10 +20,10 @@ class Navbar extends Component {
                     Elementary
                 </a>
                 <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-secondary">Category</button>
-                    <button type="button" class="btn btn-secondary">Electronegativity</button>
-                    <button type="button" class="btn btn-secondary">Half-Life</button>
-                    <button type="button" class="btn btn-secondary">Phase</button>
+                    <button onClick={this.handleFilterClick} type="button" class="btn btn-secondary" value="category">Category</button>
+                    <button onClick={this.handleFilterClick} type="button" class="btn btn-secondary" value="electronegativity">Electronegativity</button>
+                    <button onClick={this.handleFilterClick} type="button" class="btn btn-secondary" value="half-life">Half-Life</button>
+                    <button onClick={this.handleFilterClick} type="button" class="btn btn-secondary" value="phase">Phase</button>
                 </div>
             </nav>
         )
