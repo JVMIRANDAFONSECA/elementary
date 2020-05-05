@@ -1,0 +1,45 @@
+.element-square {
+    background-color: aquamarine;
+    position: relative;
+    width: 100%;
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto;
+}
+
+.element-square:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.element-number {
+    font-size: 1vw;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 2.5%;
+    top: 2.5%;
+}
+
+.element-symbol {
+    font-size: 3vw;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 2%;
+    text-align: center;
+}
+
+.element-name {
+    font-size: 0.70vw;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 75%;
+    text-align: center;
+}
